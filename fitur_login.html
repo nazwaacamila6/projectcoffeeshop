@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In CoffeeShop</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(235, 207, 153) ;
+            align-items: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 500px;
+
+            text-align: left;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+           
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 120px;
+            font-weight: bold;
+        }
+        .form-group input, 
+        .form-group select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #5A2D0C;
+        }
+        .form-links{
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-links a: :last-child{
+            margin-left: auto;
+        }
+    </style>
+    <script>
+        function togglePasword(inputId, checkboxId){
+            var passwordInput = document.getElementById(inputId);
+            var checkbox = document.getElementById(checkboxId);
+            if (checkbox.checked){
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Masuk Rimberio Coffee</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Nama Pengguna</label>
+                <input type="text" id="Username" name="Username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Kata Sandi</label>
+                <input type="password" id="password" name="password required">
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="checkbox-group">
+                            <label></label>
+                            <input type="checkbox" id="pw" name="pw" onclick="togglePasword ('pw' 'password')">
+                            <label for="pw">Lihat Sandi</label>
+                        </div>
+                    </td>
+                    <td class="form-group">
+                        <div class="form-links">
+                            <a href="lupapassword.html">Lupa Sandi</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <div class="form-links">
+                        <a href="pendaftaran.html">Daftar</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <button type="submit">Masuk</button>
+        </form>
+
+   
+
+</body>
+</html>
